@@ -11,13 +11,33 @@ import Contactme from "./components/Contactme";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<OtherComponents />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      //{" "}
+      <BrowserRouter>
+        //{" "}
+        <Layout>
+          //{" "}
+          <Routes>
+            //{" "}
+            <Route path="/" element={<MainLayout />}>
+              // <Route index element={<OtherComponents />} />
+              //{" "}
+            </Route>
+            //{" "}
+          </Routes>
+          //{" "}
+        </Layout>
+        //{" "}
+      </BrowserRouter>
+      <Navbar />
+      <Hero />
+      <MyExpertise />
+      <Aboutas />
+      <Portfolio />
+      <Customer />
+      <Contactme />
+      <Footer />
+    </>
   );
 };
 
@@ -29,16 +49,6 @@ const Layout = ({ children }) => {
       <Navbar />
       {children}
       <Footer />
-    </>
-  );
-};
-
-const MainLayout = () => {
-  return (
-    <>
-      <Layout>
-        <Outlet />
-      </Layout>
     </>
   );
 };
