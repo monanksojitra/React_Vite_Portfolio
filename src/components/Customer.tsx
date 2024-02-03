@@ -31,7 +31,7 @@ const Customer = () => {
     },
   ];
   return (
-    <div className=" text-Textcl flex   lg:gap-5 py-2  lg:py-10 flex-col bg-Herobg ">
+    <div className=" text-Textcl flex px-8   lg:gap-5 py-2  lg:py-10 flex-col bg-Herobg ">
       <div className=" p-6 text-start space-y-2  ">
         <p className=" text-sm sm:text-xl font-semibold">Clients Feedback</p>
         <p className="text-2xl font-bold md:text-4xl xl:text-6xl">
@@ -43,7 +43,7 @@ const Customer = () => {
         {arraydata.map((item) => (
           <div
             key={item.id}
-            className="border-2 border-cardborder rounded-md px-4 xl:px-6 py-5 xl:py-8 space-y-5 max-w-[340px] xl:max-w-[390px]"
+            className="border-2 border-cardborder rounded-md px-4 xl:px-6 py-5 xl:py-8 space-y-5 max-w-[340px] xl:max-w-[370px]"
           >
             <div className="flex gap-1">
               {item.reating.map((item) => (

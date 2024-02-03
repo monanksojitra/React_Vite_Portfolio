@@ -12,36 +12,26 @@ import Contactme from "./components/Contactme";
 const App = () => {
   return (
     <>
-      //{" "}
       <BrowserRouter>
-        //{" "}
-        <Layout>
-          //{" "}
-          <Routes>
-            //{" "}
-            <Route path="/" element={<MainLayout />}>
-              // <Route index element={<OtherComponents />} />
-              //{" "}
-            </Route>
-            //{" "}
-          </Routes>
-          //{" "}
-        </Layout>
-        //{" "}
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<OtherComponents />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
-      <Navbar />
-      <Hero />
-      <MyExpertise />
-      <Aboutas />
-      <Portfolio />
-      <Customer />
-      <Contactme />
-      <Footer />
     </>
   );
 };
 
 export default App;
+
+const MainLayout = () => {
+  return (
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
+};
 
 const Layout = ({ children }) => {
   return (
