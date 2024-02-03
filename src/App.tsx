@@ -11,14 +11,24 @@ import Contactme from "./components/Contactme";
 
 const App = () => {
   return (
+    // <>
+    //   <BrowserRouter>
+    //     <Routes>
+    //       <Route element={<MainLayout />}>
+    //         <Route path="/" element={<OtherComponents />} />
+    //       </Route>
+    //     </Routes>
+    //   </BrowserRouter>
+    // </>
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<OtherComponents />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Navbar />
+      <Hero />
+      <MyExpertise />
+      <Aboutas />
+      <Portfolio />
+      <Customer />
+      <Contactme />
+      <Footer />
     </>
   );
 };
