@@ -27,8 +27,8 @@ const validationSchema = Yup.object({
 const Contactme = () => {
   const formik = useFormik({
     initialValues: {
-      FirstName: "",
-      LastName: "",
+      firstName: "",
+      lastName: "",
       email: "",
       phoneNumber: "",
       message: "",
@@ -60,19 +60,19 @@ const Contactme = () => {
             <label>First Name</label>
             <input
               className={`outline-none border-[1px] rounded-md border-Primary p-2 ${
-                formik.errors.FirstName && formik.touched.FirstName
+                formik.errors.firstName && formik.touched.firstName
                   ? "border-red-500"
                   : ""
               }`}
               type="text"
-              name="lastName"
-              value={formik.values.FirstName}
+              name="firstName"
+              value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.errors.FirstName && formik.touched.FirstName && (
+            {formik.errors.firstName && formik.touched.firstName && (
               <p className="text-xs text-red-500 my-2 lg:text-sm">
-                {formik.errors.FirstName}
+                {formik.errors.firstName}
               </p>
             )}
           </div>
@@ -80,19 +80,19 @@ const Contactme = () => {
             <label>Last Name</label>
             <input
               className={`outline-none border-[1px] rounded-md border-Primary p-2 ${
-                formik.errors.LastName && formik.touched.LastName
+                formik.errors.lastName && formik.touched.lastName
                   ? "border-red-500"
                   : ""
               }`}
               type="text"
               name="lastName"
-              value={formik.values.LastName}
+              value={formik.values.lastName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.errors.LastName && formik.touched.LastName && (
+            {formik.errors.lastName && formik.touched.lastName && (
               <p className="text-xs text-red-500 my-2 lg:text-sm">
-                {formik.errors.LastName}
+                {formik.errors.lastName}
               </p>
             )}
           </div>
